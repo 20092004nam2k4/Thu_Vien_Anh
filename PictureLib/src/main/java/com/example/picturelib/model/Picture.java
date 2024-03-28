@@ -11,58 +11,69 @@ import java.util.Date;
 public class Picture {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_Picture;
-    private String name_Picture;
-    private String description;
+    private int id;
+    private String image;
+    private String nameImage;
+    private String description ;
     private String author;
-    private Date date_Submitted;
-    private boolean favourite;
-    private String tags;
+    private String favourite;
+    private String tag;
+
 
     public Picture() {
+
     }
 
-    public Picture(String name_Picture, String describe, String author, Date date_Submitted, boolean favourite, String tags) {
-        this.name_Picture = name_Picture;
-        this.description = describe;
+    public Picture(String image, String nameImage, String description, String author, String favourite, String tag) {
+        this.image = image;
+        this.nameImage = nameImage;
+        this.description = description;
         this.author = author;
-        this.date_Submitted = date_Submitted;
         this.favourite = favourite;
-        this.tags = tags;
+        this.tag = tag;
+
     }
 
-    public Picture(Long id_Picture, String name_Picture, String describe, String author, Date date_Submitted, boolean favourite, String tags) {
-        this.id_Picture = id_Picture;
-        this.name_Picture = name_Picture;
-        this.description = describe;
+    public Picture(int id, String image, String nameImage, String description, String author, String favourite, String tag) {
+        this.id = id;
+        this.image = image;
+        this.nameImage = nameImage;
+        this.description = description;
         this.author = author;
-        this.date_Submitted = date_Submitted;
         this.favourite = favourite;
-        this.tags = tags;
+        this.tag = tag;
     }
 
-    public Long getId_Picture() {
-        return id_Picture;
+    public int getId() {
+        return id;
     }
 
-    public void setId_Picture(Long id_Picture) {
-        this.id_Picture = id_Picture;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getName_Picture() {
-        return name_Picture;
+    public String getImage() {
+        return image;
     }
 
-    public void setName_Picture(String name_Picture) {
-        this.name_Picture = name_Picture;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public String getDescribe() {
+    public String getNameImage() {
+        return nameImage;
+    }
+
+    public void setNameImage(String nameImage) {
+        this.nameImage = nameImage;
+    }
+
+    public String getDescription() {
         return description;
     }
 
-    public void setDescribe(String describe) {
-        this.description = describe;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getAuthor() {
@@ -73,27 +84,19 @@ public class Picture {
         this.author = author;
     }
 
-    public Date getDate_Submitted() {
-        return date_Submitted;
-    }
-
-    public void setDate_Submitted(Date date_Submitted) {
-        this.date_Submitted = date_Submitted;
-    }
-
-    public boolean isFavourite() {
+    public String getFavourite() {
         return favourite;
     }
 
-    public void setFavourite(boolean favourite) {
+    public void setFavourite(String favourite) {
         this.favourite = favourite;
     }
 
-    public String getTags() {
-        return tags;
+    public String getTag() {
+        return tag;
     }
 
-    public void setTags(String tags) {
-        this.tags = tags;
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 }
